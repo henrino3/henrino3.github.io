@@ -153,16 +153,22 @@
             transition: all 3s ease-in-out 0.5s;
         }
         
+        .mob-show {
+            text-align: center;
+        }
+        
         @media (min-width:500px) {
-            #f-row {
-                text-align: center;
+            .mob-show {
+                display: none;
             }
         }
         
         @media (max-width:499px) {
-            /*Class name*/
-            {
-                /*properties*/
+            .link--takiri {
+                display: none;
+            }
+            #f-row {
+                text-align: center;
             }
     </style>
 </head>
@@ -202,7 +208,8 @@
             <section class="hero" id="hero">
                 <div class="container">
                     <div class="row">
-                        <div class="grid__item text-center">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 grid__item text-center">
+                            <span class="bold mob-show">Henry Mascot</span>
                             <a class="link link--takiri" href="#">Henry Masc<img src="img/smile.png" width="50px">t<span>aka #executionMafia</span></a>
                         </div>
 
@@ -241,7 +248,7 @@
 
             </section>
         </header>
-        <section class="intro text-center section-padding" id="intro">
+        <section class="intro text-center section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 wp1">
