@@ -25,6 +25,11 @@
         <![endif]-->
 
     <style type="text/css">
+            html {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        
         .bold {
             font-weight: bolder;
             font-size: 2em;
@@ -132,6 +137,10 @@
             padding: 0 3em;
         }
         
+        .block {
+            font-size: 10%;
+        }
+        
         .main-wrapper .slide .inside p {
             display: table-cell;
             width: 100%;
@@ -139,6 +148,23 @@
             vertical-align: middle;
             text-align: center;
         }
+        
+        .show {
+            transform: scale(0);
+            transition: all 3s ease-in-out 0.5s;
+        }
+        
+        @media (min-width:500px) {
+            #f-row {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width:499px) {
+            /*Class name*/
+            {
+                /*properties*/
+            }
     </style>
 </head>
 
@@ -178,7 +204,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="grid__item text-center">
-                            <a class="link link--takiri" href="#">Henry Masc<img src="img/smile.png" width="50px">t <span>aka #executionMafia</span></a>
+                            <a class="link link--takiri" href="#">Henry Masc<img src="img/smile.png" width="50px">t<span>aka #executionMafia</span></a>
                         </div>
 
                     </div>
@@ -189,7 +215,7 @@
                 </div>
                 <div class="row" id="f-row">
 
-                    <div class="col-lg-4 col-md-4 col-sm-12" style="margin-top:20%">
+                    <div class="col-lg-4 col-md-4 col-sm-12 mission" style="margin-top:20%">
                         <h4 class="header-text-l">On a <span class="bold">mission</span> to have global impact</h4>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12">
@@ -199,7 +225,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12" style="">
+                    <div class="col-lg-4 col-md-4 col-sm-12 passion" style="">
                         <h4 class "header-text-r"><span class="bold">passionate</span> about </br/>
                     <img src="svg/conference_call.svg" width="50px"> helping people <br/>
                     <img src="svg/engineering.svg" width="50px"> + technology <br/>
@@ -207,7 +233,7 @@
                     </div>
                 </div>
 
-  
+
 
             </section>
         </header>
@@ -537,71 +563,82 @@
 
                 </div>
             </div>
-            </div>
-        </section>
-        <footer>
-            <div class="container">
-                <div class="row">
+    </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
 
-                    <div class="col-md-12 text-center ">
-                        <p>Designed &amp; Developed by <a href="http://www.peterfinlan.com/">Henry Mascot</a> exclusively for <a href="http://henrymascot.com"><em>one weird guy</em></a></p>
-                    </div>
-
+                <div class="col-md-12 text-center ">
+                    <p>Designed &amp; Developed by <a href="http://www.peterfinlan.com/">Henry Mascot</a> exclusively for <a href="http://henrymascot.com"><em>one weird guy</em></a></p>
                 </div>
+
             </div>
+        </div>
 
 
 
 
 
-        </footer>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="js/jquery.js"></script>
-
-        <script type="text/javascript">
-            $("#nav-toggle").click(
-                function () {
-                    console.log("yes");
-                    $("#f-row").fadeOut('slow');
-                }
-            )
-        </script>
-        <script type="text/javascript" src="js/skrollr.min.js"></script>
-
-        <script type="text/javascript">
-            skrollr.init({
-                forceHeight: false
-            });
-
-            $(window).ready(function () {
-
-                var wHeight = $(window).height();
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
 
 
-                $('.slide')
-                    .height(wHeight)
-                    .scrollie({
-                        scrollOffset: -50,
-                        scrollingInView: function (elem) {
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
 
-                            var bgColor = elem.data('background');
+    <script type="text/javascript">
+        skrollr.init({
+            forceHeight: false
+        });
 
-                            $('.main-wrapper').css('background-color', bgColor);
+        //        $("#nav-toggle").toggle(function () {
+        //            $("#f-row").toggleClass('show');
+        //        });
 
-                        }
-                    });
+        $(window).ready(function () {
 
-            });
-        </script>
 
-        <script src="js/jquery.scrolly.js"></script>
+            $("#nav-toggle").click(function () {
+                $("#f-row").toggleClass('show');
+            })
 
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/waypoints.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/scripts.js"></script>
-        <script src="js/jquery.flexslider.js"></script>
-        <script src="js/modernizr.js"></script>
+
+
+
+
+
+            var wHeight = $(window).height();
+
+
+            $('.slide')
+                .height(wHeight)
+                .scrollie({
+                    scrollOffset: -50,
+                    scrollingInView: function (elem) {
+
+                        var bgColor = elem.data('background');
+
+                        $('.main-wrapper').css('background-color', bgColor);
+
+                    }
+                });
+
+
+            /*
+             */
+
+        });
+    </script>
+
+    <script src="js/jquery.scrolly.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/modernizr.js"></script>
 </body>
 
-<html>
+</html>
