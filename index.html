@@ -593,17 +593,34 @@
 
 
     <script type="text/javascript">
-        skrollr.init({
-            forceHeight: false
-        });
-
-
         $(window).ready(function () {
+
+            jQuery(document).ready(function () {
+                if ($(window).width() > 480) {
+
+                    $.getScript("js/skrollr.min.js", function (data, textStatus, jqxhr) {
+                        console.log(data); //data returned
+                        console.log(textStatus); //success
+                        console.log(jqxhr.status); //200
+                        console.log('Load was performed.');
+
+
+
+                        skrollr.init({
+                            forceHeight: false
+                        });
+
+                    });
+                }
+            });
 
 
             $("#nav-toggle").click(function () {
                 $("#f-row").toggleClass('show');
             })
+
+
+
 
         });
     </script>
