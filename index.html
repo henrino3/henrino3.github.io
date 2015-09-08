@@ -10,7 +10,7 @@
 
 
     <link rel="stylesheet" type="text/css" href="css/linkstyles.css" />
-    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/flexslider.css" rel="stylesheet">
@@ -26,8 +26,7 @@
 
     <style type="text/css">
             html {
-            overflow-x: hidden;
-            overflow-y: scroll;
+            overflow: scroll;
         }
         
         .bold {
@@ -225,11 +224,16 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 passion" style="">
-                        <h4 class "header-text-r"><span class="bold">passionate</span> about </br/>
-                    <img src="svg/conference_call.svg" width="50px"> helping people <br/>
-                    <img src="svg/engineering.svg" width="50px"> + technology <br/>
-                     <img src="svg/support.svg" width="50px">+ building systems</h4>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 passion">
+                        <div class="header-text-r">
+                            <h4><span class="bold">passionate</span> about
+                            <br/>
+                            <img src="svg/conference_call.svg" width="50px"> helping people
+                            <br/>
+                            <img src="svg/engineering.svg" width="50px"> + technology
+                            <br/>
+                            <img src="svg/support.svg" width="50px"> + building systems</h4>
+                        </div>
                     </div>
                 </div>
 
@@ -532,7 +536,7 @@
                 <div class="row contact-details">
                     <div class="col-md-4">
                         <div class="light-box box-hover">
-                            <h2><img src="svg/landscape.svg"></i><span>Address</span></h2>
+                            <h2><img src="svg/landscape.svg"><span>Address</span></h2>
                             <p>Accra | Lagos | Silicon Valley</p>
                         </div>
                     </div>
@@ -554,7 +558,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="light-box box-hover">
-                            <h2><img src="svg/feedback.svg"i><span>Email</span></h2>
+                            <h2><img src="svg/feedback.svg"><span>Email</span></h2>
                             <p><a href="#">me@henrymascot.com</a></p>
                         </div>
                     </div>
@@ -563,38 +567,36 @@
 
                 </div>
             </div>
-    </div>
-    </section>
-    <footer>
-        <div class="container">
-            <div class="row">
 
-                <div class="col-md-12 text-center ">
-                    <p>Designed &amp; Developed by <a href="http://www.peterfinlan.com/">Henry Mascot</a> exclusively for <a href="http://henrymascot.com"><em>one weird guy</em></a></p>
+
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 text-center ">
+                        <p>Designed &amp; Developed by <a href="http://www.peterfinlan.com/">Henry Mascot</a> exclusively for <a href="http://henrymascot.com"><em>one weird guy</em></a></p>
+                    </div>
+
                 </div>
-
             </div>
-        </div>
 
 
 
 
 
-    </footer>
+        </footer>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.js"></script>
 
 
-    <script type="text/javascript" src="js/skrollr.min.js"></script>
 
     <script type="text/javascript">
         skrollr.init({
             forceHeight: false
         });
 
-        //        $("#nav-toggle").toggle(function () {
-        //            $("#f-row").toggleClass('show');
-        //        });
 
         $(window).ready(function () {
 
@@ -603,17 +605,9 @@
                 $("#f-row").toggleClass('show');
             })
 
-
-
-
-
-
-
-
         });
     </script>
 
-    <script src="js/jquery.scrolly.js"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/waypoints.min.js"></script>
