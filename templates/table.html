@@ -1,0 +1,268 @@
+<div class="bs-example">
+<div class="page-header">
+  <!-- <h1> PREDICT TABLE  <small>Subtext for header</small></h1> -->
+</div>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr > 
+            <th class="text-center" colspan="13"><h1></h1></th>
+          </tr>
+          <tr>
+          </tr>
+          <tr><th class="no-br" colspan="5">Monday | Tuesday | Wednesday |  </th> 
+            <th class="no-br no-bl" colspan="3">Today </th> 
+            <th  class="text-center no-bl" colspan="5">| Thursday | Friday</th> 
+          </tr>
+          <tr class="title-bar">
+            <th class="title-box2 ">Time</th>
+            <th class="title-box3 " colspan="2">Teams</th>
+            <th class="text-center home" colspan="3">Home<!-- <br/><span class='small'>(Goals)</span> --></th>
+            <th class="text-center away" colspan="3">Away<!-- <br/><span class='small'>(Goals)</span> --></th>
+            <th class="title-box ">Total</th>
+            <th class="title-box ">Average</th>
+            <th  colspan="2" class="title-box2 ">Final Result</th>
+          </tr>
+          <tr  class='small'>
+            <th colspan="3" ></th>
+            <th>Scored</th>
+            <th>Conceded</th>
+            <th>Total</th>
+            <th>Scored</th>
+            <th>Conceded</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody ng-controller="Bundesliga1Controller">
+          <tr>
+            <td  class="text-right no-br"><img src="img/ionic.png" width="20px" /></td>
+            <td class="league-title no-bl" colspan="12"> {{leagueList[0].caption}}</td>
+          </tr>
+          <tr ng-repeat="data1 in teams1 ">
+            <td>{{data1.date | date}}</td>
+            <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data1.homeTeamName}}</td>
+            <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data1.awayTeamName}}</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td >1</td>
+            <td colspan="2" class="text-center">{{data1.goalshomeTeamName}}  :  {{data1.goalsawayTeamName}}</td>
+          </tr>
+        </tbody>
+
+        <tbody ng-controller="Bundesliga2Controller">
+     <tr>
+       <td  class="text-right no-br"><img src="img/ionic.png" width="20px" /></td>
+       <td class="league-title no-bl" colspan="12"> {{leagueList[1].caption}}</td>
+     </tr>
+     <tr ng-repeat="data in teams ">
+       <td>{{data.date | date}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.homeTeamName}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.awayTeamName}}</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td >1</td>
+       <td colspan="2" class="text-center">{{data.goalshomeTeamName}}  :  {{data.goalsawayTeamName}}</td>
+     </tr>
+   </tbody>
+   <tbody ng-controller="Bundesliga3Controller">
+     <tr>
+       <td  class="text-right no-br"><img src="img/ionic.png" width="20px" /></td>
+       <td class="league-title no-bl" colspan="12"> {{leagueList[2].caption}}</td>
+     </tr>
+     <tr ng-repeat="data in teams ">
+       <td>{{data.date | date}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.homeTeamName}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.awayTeamName}}</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td >1</td>
+       <td colspan="2" class="text-center">{{data.goalshomeTeamName}}  :  {{data.goalsawayTeamName}}</td>
+     </tr>
+   </tbody>
+   
+   <tbody ng-controller="PremierLeagueController">
+     <tr>
+       <td  class="text-right no-br"><img src="img/ionic.png" width="20px" /></td>
+       <td class="league-title no-bl" colspan="12"> {{leagueList[3].caption}}</td>
+     </tr>
+     <tr ng-repeat="data in teams ">
+       <td>{{data.date | date}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.homeTeamName}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.awayTeamName}}</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td >1</td>
+       <td colspan="2" class="text-center">{{data.goalshomeTeamName}}  :  {{data.goalsawayTeamName}}</td>
+     </tr>
+   </tbody>
+   
+   <tbody ng-controller="Ligue1Controller">
+     <tr>
+       <td  class="text-right no-br"><img src="img/ionic.png" width="20px" /></td>
+       <td class="league-title no-bl" colspan="12"> {{leagueList[4].caption}}</td>
+     </tr>
+     <tr ng-repeat="data in teams ">
+       <td>{{data.date | date}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.homeTeamName}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.awayTeamName}}</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td >1</td>
+       <td colspan="2" class="text-center">{{data.goalshomeTeamName}}  :  {{data.goalsawayTeamName}}</td>
+     </tr>
+   </tbody>
+   
+   <tbody ng-controller="Ligue2Controller">
+     <tr>
+       <td  class="text-right no-br"><img src="img/ionic.png" width="20px" /></td>
+       <td class="league-title no-bl" colspan="12"> {{leagueList[5].caption}}</td>
+     </tr>
+     <tr ng-repeat="data in teams ">
+       <td>{{data.date | date}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.homeTeamName}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.awayTeamName}}</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td >1</td>
+       <td colspan="2" class="text-center">{{data.goalshomeTeamName}}  :  {{data.goalsawayTeamName}}</td>
+     </tr>
+   </tbody>
+   
+   <tbody ng-controller="SerieAController">
+     <tr>
+       <td  class="text-right no-br"><img src="img/ionic.png" width="20px" /></td>
+       <td class="league-title no-bl" colspan="12"> {{leagueList[6].caption}}</td>
+     </tr>
+     <tr ng-repeat="data in teams ">
+       <td>{{data.date | date}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.homeTeamName}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.awayTeamName}}</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td >1</td>
+       <td colspan="2" class="text-center">{{data.goalshomeTeamName}}  :  {{data.goalsawayTeamName}}</td>
+     </tr>
+   </tbody>
+   <tbody ng-controller="PrimeraDivisionController">
+     <tr>
+       <td  class="text-right no-br"><img src="img/ionic.png" width="20px" /></td>
+       <td class="league-title no-bl" colspan="12"> {{leagueList[7].caption}}</td>
+     </tr>
+     <tr ng-repeat="data in teams ">
+       <td>{{data.date | date}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.homeTeamName}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.awayTeamName}}</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td >1</td>
+       <td colspan="2" class="text-center">{{data.goalshomeTeamName}}  :  {{data.goalsawayTeamName}}</td>
+     </tr>
+   </tbody>
+   
+   <tbody ng-controller="SegundaDivisionController">
+     <tr>
+       <td  class="text-right no-br"><img src="img/ionic.png" width="20px" /></td>
+       <td class="league-title no-bl" colspan="12"> {{leagueList[8].caption}}</td>
+     </tr>
+     <tr ng-repeat="data in teams ">
+       <td>{{data.date | date}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.homeTeamName}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.awayTeamName}}</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td >1</td>
+       <td colspan="2" class="text-center">{{data.goalshomeTeamName}}  :  {{data.goalsawayTeamName}}</td>
+     </tr>
+   </tbody>
+   
+   <tbody ng-controller="EhrendivisionController">
+     <tr>
+       <td  class="text-right no-br"><img src="img/ionic.png" width="20px" /></td>
+       <td class="league-title no-bl" colspan="12"> {{leagueList[9].caption}}</td>
+     </tr>
+     <tr ng-repeat="data in teams ">
+       <td>{{data.date | date}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.homeTeamName}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.awayTeamName}}</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td >1</td>
+       <td colspan="2" class="text-center">{{data.goalshomeTeamName}}  :  {{data.goalsawayTeamName}}</td>
+     </tr>
+   </tbody>
+   
+   <tbody ng-controller="SerieBController">
+     <tr>
+       <td  class="text-right no-br"><img src="img/ionic.png" width="20px" /></td>
+       <td class="league-title no-bl" colspan="12"> {{leagueList[10].caption}}</td>
+     </tr>
+     <tr ng-repeat="data in teams ">
+       <td>{{data.date | date}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.homeTeamName}}</td>
+       <td class="team-box"><img src="img/ionic.png" width="15px" /> {{data.awayTeamName}}</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td>1</td>
+       <td >1</td>
+       <td colspan="2" class="text-center">{{data.goalshomeTeamName}}  :  {{data.goalsawayTeamName}}</td>
+     </tr>
+   </tbody> 
+      </table>
+    </div>
+
+   

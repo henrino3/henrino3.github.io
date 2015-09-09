@@ -1,0 +1,174 @@
+                html {
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+            
+            .bold {
+                font-weight: bolder;
+                font-size: 2em;
+            }
+            
+            #f-row .bold {
+                color: #1F1840;
+            }
+            
+            .header-text-r {
+                margin-right: 15%;
+            }
+            
+            .header-text-l {
+                margin-left: 10%;
+            }
+            
+            .text {
+                color: #fff;
+                font-size: 2em;
+            }
+            
+            h4 {
+                font-size: 1.5em;
+            }
+            
+            .text a {
+                color: aqua;
+            }
+            
+            h2 {
+                font-size: 2em;
+            }
+            
+            p {
+                font-size: 1.2em;
+            }
+            
+            nav ul li a {
+                font-size: 5em;
+            }
+            
+            .contact-details img {
+                width: 35%;
+            }
+            
+            .social-btn {
+                width: 80px;
+                height: 80px;
+            }
+            
+            body {
+                background: url(img/bubbles.png) repeat fixed;
+                background-color: #FBFCF6;
+            }
+            
+            #center {
+                background: #FBFCF6;
+                width: 90%;
+                padding: 1em;
+                margin: 1em auto;
+                border: 1px solid #bbb;
+            }
+            
+            .trollFooter {
+                background-image: linear-gradient(-180deg, #6A1078 3%, #03437D 100%);
+                padding: 120px 0 0 0;
+                display: inline-block;
+                text-align: center;
+            }
+            
+            .sectionCont {
+                width: 100%;
+                display: block;
+            }
+            
+            #fun {
+                box-sizing: border-box;
+                font-family: 'Coming Soon', cursive;
+                transition: background 1s ease;
+                background: #3498db;
+            }
+            
+            .main-wrapper p {
+                color: #ecf0f1;
+                font-size: 2em;
+                text-align: center;
+            }
+            
+            .main-wrapper span {
+                clear: both;
+                font-size: .7em;
+                color: #bdc3c7;
+            }
+            
+            .main-wrapper a {
+                color: #c0392b;
+                text-decoration: none;
+            }
+            
+            .main-wrapper .slide .inside {
+                display: table;
+                height: 100%;
+                width: 100%;
+                padding: 0 3em;
+            }
+            
+            .social-btn {
+                width: 95px;
+                height: 95px;
+            }
+            
+            .block {
+                font-size: 10%;
+            }
+            
+            .main-wrapper .slide .inside p {
+                display: table-cell;
+                width: 100%;
+                clear: both;
+                vertical-align: middle;
+                text-align: center;
+            }
+            
+            .show {
+                transform: scale(0);
+                transition: all 3s ease-in-out 0.5s;
+            }
+            
+            .mob-show {
+                text-align: center;
+            }
+            
+            .mest-img {
+                vertical-align: baseline;
+                background: #ccc;
+                display: block;
+                margin-left: 34%;
+                padding: 9px;
+                border-radius: 13%;
+            }
+            
+            .mest-text {
+                background-color: rgba(93, 111, 142, 0.58);
+                padding: 10px;
+                border-radius: 10%;
+            }
+            
+            .overlay {
+                background: rgba(194, 142, 100, 0.8);
+            }
+            
+            @media (min-width:500px) {
+                .mob-show {
+                    display: none;
+                }
+            }
+            
+            @media (max-width:499px) {
+                .link--takiri {
+                    display: none;
+                }
+                #f-row {
+                    text-align: center;
+                }
+                .twitter-flow {
+                    width: 85%;
+                    margin-left: 5%;
+                }

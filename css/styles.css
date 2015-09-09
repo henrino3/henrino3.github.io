@@ -736,7 +736,7 @@ Hero
 ========================================================================== */
 
 .hero {
-   /* background: url('../img/hero-bgg.jpg') no-repeat center center;*/
+    /* background: url('../img/hero-bgg.jpg') no-repeat center center;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1174,7 +1174,6 @@ ul.social-buttons li:last-child {
 
 .social-btn:hover,
 .social-btn:focus {
-    background: #3dc9b3;
     color: #fff;
 }
 
