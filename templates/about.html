@@ -1,0 +1,22 @@
+
+
+<div class="aboutBox" ng-controller="LeaguesCtrl">
+
+
+
+
+
+<div ng-repeat="data1 in leagues">
+
+<br/>
+<h3><br/></h3>
+<ul>
+<li>links</li>
+	<ul><!-- 
+		<li>{{data1.homeTeamName}} :: id - {{getFlag(data1._links.homeTeam.href,getIdn)}}</li>
+		<li>{{data1.awayTeamName}} :: id - {{getIdn(data1._links.awayTeam.href)}}</li>
+	</ul> -->
+<li>{{data1.homeTeamName}} [{{data1.result.goalsHomeTeam}}] | [{{data1.result.goalsAwayTeam}}] {{data1.awayTeamName}} </li>
+<li>{{data1.date | date}}<br/></li>
+</ul>
+</div>
