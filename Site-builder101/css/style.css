@@ -1,0 +1,159 @@
+
+.app{
+  margin: 20px;
+}
+
+.header{
+
+}
+
+.logo img{
+  width: 70%;
+}
+
+.header .right{
+  background: #bbd7e6;
+  height: 45px;
+}
+
+.header .tools{
+  background: #e4e3e3;
+  height: 45px;
+}
+
+
+.main{
+
+}
+
+
+.side{
+
+}
+
+.side h1{
+  z-index: 1;
+}
+
+.side .row{
+  height: 125px;
+}
+
+
+.faces{
+  background: #619f68;
+
+}
+
+.faces div{
+  margin-left: 20px;
+
+}
+
+.hairs img{
+  width: 39%;
+  webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+  transition: width 1s;
+  z-index: 2;
+
+
+}
+.faces div img:hover{
+
+
+}
+
+
+
+.hairs{
+  background: #bbd7e6;
+
+}
+
+.beard{
+  background: #ebb9a9;
+
+}
+
+.tools{
+  background: #e4e3e3;
+}
+
+
+.main{
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.canvas{
+    height: 500px;
+    background: #b3b0b0;
+    margin-left: 12%;
+    width: 106%;
+      text-align: center;
+}
+
+.canvas img{
+    width: 100%;
+}
+
+canvas{
+  width: 885px;
+  height: 375px;
+
+
+}
+
+.bar{
+  background: #e4e3e3;
+  height: 125px;
+  margin-left: 12%;
+  width: 106%;
+}
+
+.b-header{
+    margin: 20px;
+}
+
+.b-logo{
+  height: 100px;
+  margin: 20px;
+  background: #eee;
+}
+
+.b-menu{
+    margin: 20px;
+    background: #eee;
+    height: 100px;
+}
+
+.b-title{
+  margin-left: 20%;
+  padding: 20px;
+  background: #eee;
+}
+
+.body-main{
+    margin-left: 5%;
+}
+
+.body-text{
+  background: #eee;
+  padding: 20px;
+  margin: 20px;
+  height: 200px;
+}
+
+.body-table{
+  background: #eee;
+  padding: 20px;
+  margin: 20px;
+  height: 200px;
+}
+
+
+
+
+
+
+/** add MEDIAquery to canvas
