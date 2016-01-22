@@ -31,6 +31,10 @@
 
 }
 
+.side div {
+  padding: 20px;
+}
+
 .side h1{
   z-index: 1;
 }
@@ -87,10 +91,11 @@
 
 .canvas{
     height: 500px;
-    background: #b3b0b0;
+    background: #eee;
     margin-left: 12%;
     width: 106%;
-      text-align: center;
+    text-align: center;
+    overflow-y: scroll;
 }
 
 .canvas img{
@@ -118,19 +123,16 @@ canvas{
 .b-logo{
   height: 100px;
   margin: 20px;
-  background: #eee;
 }
 
 .b-menu{
     margin: 20px;
-    background: #eee;
     height: 100px;
 }
 
 .b-title{
   margin-left: 20%;
   padding: 20px;
-  background: #eee;
 }
 
 .body-main{
@@ -138,17 +140,24 @@ canvas{
 }
 
 .body-text{
-  background: #eee;
   padding: 20px;
   margin: 20px;
   height: 200px;
 }
 
 .body-table{
-  background: #eee;
   padding: 20px;
   margin: 20px;
   height: 200px;
+}
+
+.side h2, .side h6, .side img, .side p, .side table{
+  z-index: 1;
+  border: 1px red solid;
+}
+
+.ui-state-hover, .ui-state-default{
+  background: #eee;
 }
 
 
