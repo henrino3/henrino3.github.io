@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat101</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.mobile.js"></script>
+  <script src="js/app.js"></script>
+  <script src="http://cdn.pubnub.com/pubnub-3.4.4.js"></script>
+
+  <style media="screen">
+    body{
+      background: #ccc;
+    }
+
+    .container{
+
+    }
+    .main{
+      border:  1px solid #000;
+      height: 500px;
+      padding: 10px;
+      margin: 10px;
+      background: #fff;
+    }
+    .chat{
+      border-right: 1px #000 solid;
+      height: 480px;
+    }
+    .btn-danger{
+          width: 100%;
+    }
+
+  .ui-loader{
+    display: none;
+  }
+
+  </style>
+</head>
+
+<body>
+ <div class="container" data-role="page" id="chatPage">
+   <header>
+     <nav class="nav-bar" data-role="header">
+       <h3 >ChatApp</h3>
+     </nav>
+   </header>
+   <div class="row main" data-role="content">
+     <div class="col-md-8 chat">
+       <ul data-role="listview" id="messageList">
+ <!-- <li><span class="username">User123:</span>This is my message.</li> -->
+</ul>
+     </div>
+     <div class="col-md-2 list"></div>
+   </div>
+
+   <div class="row writer">
+     <div class="col-md-offset-3 col-md-5 box">
+    <input class="form-control" type="text" id="messageContent">
+     </div>
+     <div class="col-md-2 send">
+       <button class="btn btn-large btn-danger" id="sendMessageButton" name="button"> Send</button>
+     </div>
+   </div>
+
+
+ </div>
+
+</body>
+</html>
