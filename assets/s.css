@@ -1,0 +1,2538 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Julius Sans One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Julius Sans One'), local('JuliusSansOne-Regular'), url(/web/20161017083312im_/http://henrymascot.com/axes/c/jo/JuliusSansOne-Regular.ttf) format('ttf'), url(/web/20161017083312im_/http://henrymascot.com/axes/c/jo/JuliusSansOne-Regular.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Julius Sans One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Julius Sans One'), local('JuliusSansOne-Regular'), url(/web/20161017083312im_/http://henrymascot.com/axes/c/jo/JuliusSansOne-Regular.ttf) format('ttf'), url(/web/20161017083312im_/http://henrymascot.com/axes/c/jo/JuliusSansOne-Regular.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+* HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #4f4f4f;
+}
+html {
+  height: 100%;
+  background-color: transparent;
+}
+body {
+  font-size: 1em;
+  line-height: 1.4;
+  color: #5b5b5b;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  padding-top: 0px;
+  background: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/main_bg.jpg) no-repeat center center;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+img {
+  vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+/* ==========================================================================
+   Less Mixins
+   ========================================================================== */
+/* ==========================================================================
+   Main styles
+   ========================================================================== */
+.center {
+  max-width: 1000px;
+  padding: 10px 15px;
+  margin: 0 auto;
+  position: relative;
+}
+.center.sml-center {
+  max-width: 600px;
+}
+.row,
+.contain-to-grid .top-bar {
+  max-width: 100%;
+}
+a,
+a:active,
+a:visited {
+  color: #ECA056;
+}
+a:hover {
+  color: #2a2a2a;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   START : HEADER
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+header .top-bar {
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+header .top-bar .title-area h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 300;
+}
+header .top-bar .title-area h1 a {
+  color: #ECA056;
+  display: inline-block;
+  width: auto;
+  margin-right: 15px;
+  background-color: #000;
+  color: #fontgrey;
+  font-weight: normal;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: relative;
+}
+header .top-bar .title-area h1 a:hover {
+  color: #fff;
+  background-color: #ECA056;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+header .top-bar .toggle-topbar.menu-icon a span {
+  -webkit-box-shadow: 0 10px 0 1px #ECA056, 0 16px 0 1px #ECA056, 0 22px 0 1px #ECA056;
+  box-shadow: 0 10px 0 1px #ECA056, 0 16px 0 1px #ECA056, 0 22px 0 1px #ECA056;
+}
+header .top-bar .top-bar-section {
+  color: #ccc;
+}
+header .top-bar .top-bar-section ul {
+  background-color: #fff;
+  padding-right: 4%;
+}
+header .top-bar .top-bar-section ul li a {
+  font-weight: 300;
+  font-family: 'Julius Sans One', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  background-color: transparent;
+  color: #5b5b5b;
+  padding: 0 6px;
+}
+header .top-bar .top-bar-section ul li a:hover {
+  color: #3d6f30;
+}
+header .expanded .top-bar-section ul {
+  background-color: #000;
+  padding: 10px 0;
+  text-align: right;
+}
+header .expanded .top-bar-section ul li a {
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 15px 0 0px;
+}
+header .expanded .top-bar-section ul li a:hover {
+  color: #ECA056;
+}
+header .top-bar.expanded .title-area {
+  background-color: #fff;
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   END : HEADER
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   START : BODY
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#hero_cont {
+  position: relative;
+}
+#hero_cont .hero_txt {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  left: 7%;
+  text-align: center;
+  color: #fff;
+  font-family: 'Julius Sans One', sans-serif;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+#hero_cont .hero_txt h2 {
+  font-weight: normal;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #fff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#hero_cont .hero_txt h2 small {
+  color: #ECA056;
+}
+#hero_cont .hero_txt hr {
+  margin-bottom: 30px;
+}
+#hero_cont .hero_txt p {
+  letter-spacing: 0.3em;
+}
+#hero_cont .hero_img {
+  position: relative;
+}
+#hero_cont .hero_img img {
+  width: 100%;
+  height: auto;
+}
+#hero_cont .hero_img:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/rugged_bg.png) repeat;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.hero_txt + p {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 7%;
+  z-index: 2;
+}
+.hero_txt + p a {
+  color: #ffffff;
+}
+.hero_txt + p a:hover {
+  color: #ECA056;
+}
+hr {
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  border-top: 1px solid #8b8b8b;
+  margin: 0 auto 50px auto;
+  max-width: 400px;
+  position: relative;
+}
+hr:after {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  content: "";
+  bottom: -4px;
+  left: 50%;
+  margin-left: -5px;
+  background-color: #8b8b8b;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+
+  -webkit-transform: rotate(45deg);
+  /* Safari and Chrome */
+
+  -o-transform: rotate(45deg);
+  /* Opera */
+
+  -moz-transform: rotate(45deg);
+  /* Firefox */
+
+}
+.divide {
+  border-top: 1px dashed #8b8b8b;
+  margin: 50px auto 0px auto;
+  max-width: 100%;
+}
+.pagepanel {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.pagepanel .center {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.pagepanel h2 {
+  font-weight: 300;
+  font-family: 'Julius Sans One', sans-serif;
+  letter-spacing: 0px;
+  margin: 0px 0 20px 0;
+  padding: 0 0 0px 0;
+}
+.pagepanel h3 {
+  font-weight: 300;
+  font-family: 'Julius Sans One', sans-serif;
+  letter-spacing: 0px;
+  margin: 0px 0 20px 0;
+  padding: 0 0 0px 0;
+}
+.pagepanel .hero_content_img {
+  position: relative;
+}
+.pagepanel .hero_content_img img {
+  width: 100%;
+}
+.pagepanel .hero_content_img:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/rugged_bg.png) repeat;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.pagepanel .bx-wrapper {
+  padding-bottom: 25px;
+  background-color: #fff;
+}
+.pagepanel .bx-wrapper .bx-pager {
+  background-color: #fff;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  bottom: -40px;
+}
+.pagepanel .bx-wrapper .bx-pager.bx-default-pager a {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #696969;
+  margin: 0 8px;
+}
+.pagepanel .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.pagepanel .bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #ECA056;
+}
+.pagepanel .bx-wrapper h5 {
+  font-family: 'Julius Sans One', sans-serif;
+  line-height: 1em;
+  font-weight: normal;
+  margin: 0px;
+  padding: 20px 10px 0px 10px;
+  color: #858383;
+}
+.pagepanel .bx-wrapper p {
+  margin: 0px;
+  padding: 0px 0 0px 0;
+  color: #858383;
+  font-size: 12px;
+  line-height: 1em;
+  padding-top: 5px;
+}
+.pagepanel .contact_link {
+  font-size: 14px;
+}
+.pagepanel .contact_link i {
+  font-size: 20px;
+}
+.pagepanel .contact_link .more_head {
+  color: red;
+}
+.pagepanel .contact_link.more_head span {
+  color: #ECA056;
+  cursor: pointer;
+}
+.pagepanel .contact_social {
+  font-size: 1em;
+  padding: 30px 0;
+}
+.pagepanel .contact_social a {
+  background-color: #5b5b5b;
+  width: 60px;
+  height: 60px;
+  margin: 0 2px;
+  display: inline-block;
+}
+.pagepanel .contact_social a i {
+  color: #fff;
+  line-height: 4em;
+}
+.pagepanel .contact_social a:hover {
+  background-color: #ECA056;
+}
+.contact .center {
+  padding-bottom: 100px;
+}
+.contact .center #map_canvas {
+  width: 100%;
+  height: 300px;
+  display: block;
+  background-color: #ccc;
+  position: relative;
+}
+.pagepanel.down_arrow:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 20px solid #ECA056;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  left: 50%;
+  margin-left: -20px;
+  bottom: -19px;
+  z-index: 2;
+}
+.pagepanel.white.down_arrow:after {
+  border-top-color: #fff;
+}
+.pagepanel.dark.down_arrow:after {
+  border-top-color: #101210;
+}
+.pagepanel.black.down_arrow:after {
+  border-top-color: #000000;
+}
+.pagepanel.white {
+  background-color: #fff;
+}
+.pagepanel.transparent {
+  background-color: transparent;
+}
+.pagepanel.transparent a {
+  color: #e2f2de;
+}
+.pagepanel.transparent a:hover {
+  color: #fff;
+}
+.pagepanel.transparent hr + p {
+  margin: 0px;
+  padding: 0px;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+.pagepanel.transparent h2 {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+.pagepanel.transparent hr {
+  border-top: 1px solid #fff;
+}
+.pagepanel.transparent hr:after {
+  background-color: #fff;
+}
+.pagepanel.transparent .bx-wrapper .bx-pager {
+  background-color: #fff;
+  bottom: -95px;
+  padding-bottom: 60px;
+}
+.pagepanel.transparent:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 20px solid #fff;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  left: 50%;
+  margin-left: -20px;
+  top: -1px;
+  z-index: 2;
+}
+.pagepanel.slider_panel {
+  padding-bottom: 90px;
+}
+.pagepanel.dark {
+  position: relative;
+}
+.pagepanel.dark h2 {
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  z-index: 3;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+.pagepanel.black {
+  background: #000000 url(/web/20161017083312im_/http://henrymascot.com/axes/i/black_img.jpg) no-repeat left bottom;
+  color: #5b5b5b;
+}
+.pagepanel.black h2 {
+  color: #fff;
+}
+.pagepanel.black h3 {
+  margin-bottom: 0px;
+}
+.pagepanel.black h3 a i {
+  color: #fff;
+  margin-left: 10px;
+}
+.pagepanel.black h3 a:hover {
+  color: #fff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.pagepanel.black h3 a:hover i {
+  color: red;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.pagepanel.black p {
+  font-size: 13px;
+  color: #949494;
+  margin-bottom: 50px;
+}
+.pagepanel.work .row {
+  padding-bottom: 50px;
+}
+.pagepanel.work h4 {
+  font-weight: 300;
+  font-family: 'Julius Sans One', sans-serif;
+}
+.pagepanel.work h4 i {
+  display: block;
+  font-size: 15px;
+  color: #5f5f5f;
+  padding-bottom: 20px;
+}
+.pagepanel.work h5 {
+  cursor: crosshair;
+  background-color: #828282;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: auto;
+  color: #fff;
+  position: relative;
+  padding: 20px 20px;
+  min-height: 100px;
+  bottom: 0 0 15px 0;
+}
+.pagepanel.work h5 i {
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  margin-top: -6px;
+}
+.pagepanel.work h5 span {
+  display: none;
+}
+.pagepanel.work .ushahidi {
+  background-image: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/content/logo_ushahidi.png);
+}
+.pagepanel.work .ihub {
+  background-image: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/content/logo_ihub.png);
+}
+.pagepanel.work .brck {
+  background-image: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/content/logo_brck.png);
+}
+.pagepanel.work .bankinter {
+  background-image: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/content/logo_bankinter.png);
+}
+.pagepanel.work .mit {
+  background-image: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/content/logo_mit.png);
+}
+.pagepanel.work .ted {
+  background-image: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/content/logo_ted.png);
+}
+.pagepanel.work .desmond {
+  background-image: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/content/logo_tutu.png);
+}
+.pagepanel.work .microsoft {
+  background-image: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/content/logo_microsoft.png);
+}
+.pagepanel.work .waabeh {
+  background-image: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/content/logo_waabeh.png);
+}
+.pagepanel.work .dld {
+  background-image: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/content/logo_dld.png);
+}
+.pagepanel.work .socialent {
+  background-image: url(https://web.archive.org/web/20161017083312im_/http://julia.na/wp-content/themes/juliana/assets/img/content/logo_socialent.png);
+}
+.pagepanel.work h5:hover {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.pagepanel.work .ushahidi:hover {
+  background-color: #8a1e04;
+}
+.pagepanel.work .ihub:hover {
+  background-color: #132530;
+}
+.pagepanel.work .brck:hover {
+  background-color: #fcd432;
+}
+.pagepanel.work .bankinter:hover {
+  background-color: #e95d0f;
+}
+.pagepanel.work .mit:hover {
+  background-color: #43897F;
+}
+.pagepanel.work .ted:hover {
+  background-color: #FF2A06;
+}
+.pagepanel.work .desmond:hover {
+  background-color: #3c1e5d;
+}
+.pagepanel.work .microsoft:hover {
+  background-color: #00aeef;
+}
+.pagepanel.work .waabeh:hover {
+  background-color: #619ed1;
+}
+.pagepanel.work .dld:hover {
+  background-color: #e64314;
+}
+.pagepanel.work .socialent:hover {
+  background-color: #ffcc00;
+}
+.pagepanel.work p {
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.3em;
+}
+.pagepanel.work p strong {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.pagepanel.work p a {
+  display: block;
+  padding-top: 10px;
+}
+.pagepanel.work p a i {
+  margin-right: 7px;
+}
+/*expections*/
+.dark + .pagepanel p {
+  margin-bottom: 0.7em;
+  line-height: 1.3em;
+}
+.dark + .pagepanel p small {
+  font-size: 0.8em;
+  font-style: italic;
+  background-color: #dcdcdc;
+  padding: 2px 6px;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   END : BODY
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   START : FOOTER
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+footer {
+  background-color: #dfdfdf;
+  text-align: center;
+  position: relative;
+  padding: 40px 15px;
+}
+footer p {
+  font-size: 13px;
+  margin: 0px;
+  padding: 0px;
+}
+footer p span {
+  display: block;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+footer p span i {
+  margin-right: 4px;
+}
+footer:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #dfdfdf;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  left: 50%;
+  margin-left: -20px;
+  top: -19px;
+  z-index: 2;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   END : FOOTER
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ==========================================================================
+   Media Queries for Responsive Design.
+   ========================================================================== */
+/* huge desktop */
+@media (min-width: 981px) and (max-width: 4000px) {
+  header .top-bar {
+    height: 90px;
+  }
+  header .top-bar .title-area .name {
+    height: 90px;
+  }
+  header .top-bar .title-area h1 a {
+    padding: 0px 60px;
+    margin-right: 50px;
+    letter-spacing: -6px;
+    font-size: 2.3em;
+    line-height: 90px;
+  }
+  header .top-bar .title-area h1 span {
+    line-height: 90px;
+    font-size: 1.8em;
+    position: relative;
+    top: -2px;
+  }
+  header .top-bar .top-bar-section ul li a {
+    line-height: 90px;
+  }
+  #hero_cont .hero_txt h2 {
+    font-size: 6em;
+    margin-bottom: 0.2em;
+  }
+  .pagepanel h2 {
+    font-size: 3em;
+  }
+}
+/* Large desktop */
+@media (min-width: 980px) and (max-width: 1450px) {
+  #hero_cont .hero_txt h2 {
+    font-size: 4.2em;
+  }
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  header .top-bar .title-area h1 a {
+    padding: 0px 40px;
+  }
+  #hero_cont .hero_txt h2 {
+    font-size: 3em;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  #hero_cont .hero_img:after {
+    display: none;
+  }
+  #hero_cont .hero_txt + p {
+    display: none;
+  }
+  #hero_cont .hero_txt h2 {
+    font-size: 1.8em;
+  }
+  #hero_cont .hero_txt p {
+    font-size: 10px;
+  }
+  .pagepanel .hero_content_img:after {
+    display: none;
+  }
+  .pagepanel.black {
+    background-image: none;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  #hero_cont .hero_txt h2 {
+    font-size: 1.2em;
+  }
+  #hero_cont .hero_txt p,
+  #hero_cont .hero_txt hr {
+    display: none;
+  }
+  #hero_cont .hero_txt + p {
+    display: none;
+  }
+  .pagepanel .bx-wrapper h5 {
+    font-size: 11px;
+    line-height: 1em;
+  }
+  .pagepanel .bx-wrapper p {
+    font-size: 11px;
+    line-height: 1em;
+    padding-top: 5px;
+  }
+  .pagepanel .bx-wrapper .bx-pager.bx-default-pager a {
+    width: 8px;
+    height: 8px;
+  }
+  body {
+    background-size: auto auto;
+  }
+  .pagepanel.work .desmond {
+    background-size: 75% auto;
+  }
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+  
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+       * Don't show links for images, or javascript/internal links
+       */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   START : AWESOME FONT
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*
+ *  Font Awesome 3.1.0
+ *  the iconic font designed for Bootstrap
+ *  -------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation
+ *  can be found at: http://fontawesome.io
+ *
+ *  License
+ *  -------------------------------------------------------
+ *  - The Font Awesome font is licensed under the SIL Open Font License v1.1 -
+ *    http://scripts.sil.org/OFL
+ *  - Font Awesome CSS, LESS, and SASS files are licensed under the MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - Font Awesome documentation licensed under CC BY 3.0 License -
+ *    http://creativecommons.org/licenses/by/3.0/
+ *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
+ *    "Font Awesome by Dave Gandy - http://fontawesome.io"
+
+ *  Contact
+ *  -------------------------------------------------------
+ *  Email: dave@fontawesome.io
+ *  Twitter: http://twitter.com/fortaweso_me
+ *  Work: Lead Product Designer @ http://kyruus.com
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/web/20161017083312im_/http://henrymascot.com/axes/c/fa/fontawesome-webfont.otf');
+  src: url('/web/20161017083312im_/http://henrymascot.com/axes/c/fa/fontawesome-webfont.eot#iefix') format('embedded-opentype'),url('/web/20161017083312im_/http://henrymascot.com/axes/c/fa/fontawesome-webfont.woff') format('woff'),url('/web/20161017083312im_/http://henrymascot.com/axes/c/fa/fontawesome-webfont.ttf') format('truetype'),url('/web/20161017083312im_/http://henrymascot.com/axes/c/fa/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* FONT AWESOME CORE
+ * -------------------------- */
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+  vertical-align: -10%;
+  font-size: 1.3333333333333333em;
+}
+/* makes sure icons active on rollover in links */
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline;
+}
+/* increased font size for icon-large */
+[class^="icon-"].icon-fixed-width,
+[class*=" icon-"].icon-fixed-width {
+  display: inline-block;
+  width: 1.1428571428571428em;
+  text-align: right;
+  padding-right: 0.2857142857142857em;
+}
+[class^="icon-"].icon-fixed-width.icon-large,
+[class*=" icon-"].icon-fixed-width.icon-large {
+  width: 1.4285714285714286em;
+}
+.icons-ul {
+  margin-left: 2.142857142857143em;
+  list-style-type: none;
+}
+.icons-ul > li {
+  position: relative;
+}
+.icons-ul .icon-li {
+  position: absolute;
+  left: -2.142857142857143em;
+  width: 2.142857142857143em;
+  text-align: center;
+  line-height: inherit;
+}
+[class^="icon-"].hide,
+[class*=" icon-"].hide {
+  display: none;
+}
+.icon-muted {
+  color: #eeeeee;
+}
+.icon-light {
+  color: #ffffff;
+}
+.icon-dark {
+  color: #333333;
+}
+.icon-border {
+  border: solid 1px #eeeeee;
+  padding: .2em .25em .15em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.icon-2x {
+  font-size: 2em;
+}
+.icon-2x.icon-border {
+  border-width: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.icon-3x {
+  font-size: 3em;
+}
+.icon-3x.icon-border {
+  border-width: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.icon-4x {
+  font-size: 4em;
+}
+.icon-4x.icon-border {
+  border-width: 4px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.icon-5x {
+  font-size: 5em;
+}
+.icon-5x.icon-border {
+  border-width: 5px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+[class^="icon-"].pull-left,
+[class*=" icon-"].pull-left {
+  margin-right: .3em;
+}
+[class^="icon-"].pull-right,
+[class*=" icon-"].pull-right {
+  margin-left: .3em;
+}
+/* BOOTSTRAP SPECIFIC CLASSES
+ * -------------------------- */
+/* Bootstrap 2.0 sprites.less reset */
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+/* more sprites.less reset */
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"] {
+  background-image: none;
+}
+/* keeps Bootstrap styles with and without icons the same */
+.btn [class^="icon-"].icon-large,
+.nav [class^="icon-"].icon-large,
+.btn [class*=" icon-"].icon-large,
+.nav [class*=" icon-"].icon-large {
+  line-height: .9em;
+}
+.btn [class^="icon-"].icon-spin,
+.nav [class^="icon-"].icon-spin,
+.btn [class*=" icon-"].icon-spin,
+.nav [class*=" icon-"].icon-spin {
+  display: inline-block;
+}
+.nav-tabs [class^="icon-"],
+.nav-pills [class^="icon-"],
+.nav-tabs [class*=" icon-"],
+.nav-pills [class*=" icon-"],
+.nav-tabs [class^="icon-"].icon-large,
+.nav-pills [class^="icon-"].icon-large,
+.nav-tabs [class*=" icon-"].icon-large,
+.nav-pills [class*=" icon-"].icon-large {
+  line-height: .9em;
+}
+.btn [class^="icon-"].pull-left.icon-2x,
+.btn [class*=" icon-"].pull-left.icon-2x,
+.btn [class^="icon-"].pull-right.icon-2x,
+.btn [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .18em;
+}
+.btn [class^="icon-"].icon-spin.icon-large,
+.btn [class*=" icon-"].icon-spin.icon-large {
+  line-height: .8em;
+}
+.btn.btn-small [class^="icon-"].pull-left.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-small [class^="icon-"].pull-right.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .25em;
+}
+.btn.btn-large [class^="icon-"],
+.btn.btn-large [class*=" icon-"] {
+  margin-top: 0;
+}
+.btn.btn-large [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .05em;
+}
+.btn.btn-large [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x {
+  margin-right: .2em;
+}
+.btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-left: .2em;
+}
+/* Fixes alignment in nav lists */
+.nav-list [class^="icon-"],
+.nav-list [class*=" icon-"] {
+  line-height: inherit;
+}
+/* EXTRAS
+ * -------------------------- */
+/* Stacked and layered icon */
+.icon-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: -35%;
+}
+.icon-stack [class^="icon-"],
+.icon-stack [class*=" icon-"] {
+  display: block;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  line-height: inherit;
+  *line-height: 2em;
+}
+.icon-stack .icon-stack-base {
+  font-size: 2em;
+  *line-height: 1em;
+}
+/* Animated rotating icon */
+.icon-spin {
+  display: inline-block;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+/* Prevent stack and spinners from being taken inline when inside a link */
+a .icon-stack,
+a .icon-spin {
+  display: inline-block;
+  text-decoration: none;
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+/* Icon rotations and mirroring */
+.icon-rotate-90:before {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+.icon-rotate-180:before {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+.icon-rotate-270:before {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+.icon-flip-horizontal:before {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.icon-flip-vertical:before {
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+/* ensure rotation occurs inside anchor tags */
+a .icon-rotate-90:before,
+a .icon-rotate-180:before,
+a .icon-rotate-270:before,
+a .icon-flip-horizontal:before,
+a .icon-flip-vertical:before {
+  display: inline-block;
+}
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.icon-glass:before {
+  content: "\f000";
+}
+.icon-music:before {
+  content: "\f001";
+}
+.icon-search:before {
+  content: "\f002";
+}
+.icon-envelope-alt:before {
+  content: "\f003";
+}
+.icon-heart:before {
+  content: "\f004";
+}
+.icon-star:before {
+  content: "\f005";
+}
+.icon-star-empty:before {
+  content: "\f006";
+}
+.icon-user:before {
+  content: "\f007";
+}
+.icon-film:before {
+  content: "\f008";
+}
+.icon-th-large:before {
+  content: "\f009";
+}
+.icon-th:before {
+  content: "\f00a";
+}
+.icon-th-list:before {
+  content: "\f00b";
+}
+.icon-ok:before {
+  content: "\f00c";
+}
+.icon-remove:before {
+  content: "\f00d";
+}
+.icon-zoom-in:before {
+  content: "\f00e";
+}
+.icon-zoom-out:before {
+  content: "\f010";
+}
+.icon-power-off:before,
+.icon-off:before {
+  content: "\f011";
+}
+.icon-signal:before {
+  content: "\f012";
+}
+.icon-gear:before,
+.icon-cog:before {
+  content: "\f013";
+}
+.icon-trash:before {
+  content: "\f014";
+}
+.icon-home:before {
+  content: "\f015";
+}
+.icon-file-alt:before {
+  content: "\f016";
+}
+.icon-time:before {
+  content: "\f017";
+}
+.icon-road:before {
+  content: "\f018";
+}
+.icon-download-alt:before {
+  content: "\f019";
+}
+.icon-download:before {
+  content: "\f01a";
+}
+.icon-upload:before {
+  content: "\f01b";
+}
+.icon-inbox:before {
+  content: "\f01c";
+}
+.icon-play-circle:before {
+  content: "\f01d";
+}
+.icon-rotate-right:before,
+.icon-repeat:before {
+  content: "\f01e";
+}
+.icon-refresh:before {
+  content: "\f021";
+}
+.icon-list-alt:before {
+  content: "\f022";
+}
+.icon-lock:before {
+  content: "\f023";
+}
+.icon-flag:before {
+  content: "\f024";
+}
+.icon-headphones:before {
+  content: "\f025";
+}
+.icon-volume-off:before {
+  content: "\f026";
+}
+.icon-volume-down:before {
+  content: "\f027";
+}
+.icon-volume-up:before {
+  content: "\f028";
+}
+.icon-qrcode:before {
+  content: "\f029";
+}
+.icon-barcode:before {
+  content: "\f02a";
+}
+.icon-tag:before {
+  content: "\f02b";
+}
+.icon-tags:before {
+  content: "\f02c";
+}
+.icon-book:before {
+  content: "\f02d";
+}
+.icon-bookmark:before {
+  content: "\f02e";
+}
+.icon-print:before {
+  content: "\f02f";
+}
+.icon-camera:before {
+  content: "\f030";
+}
+.icon-font:before {
+  content: "\f031";
+}
+.icon-bold:before {
+  content: "\f032";
+}
+.icon-italic:before {
+  content: "\f033";
+}
+.icon-text-height:before {
+  content: "\f034";
+}
+.icon-text-width:before {
+  content: "\f035";
+}
+.icon-align-left:before {
+  content: "\f036";
+}
+.icon-align-center:before {
+  content: "\f037";
+}
+.icon-align-right:before {
+  content: "\f038";
+}
+.icon-align-justify:before {
+  content: "\f039";
+}
+.icon-list:before {
+  content: "\f03a";
+}
+.icon-indent-left:before {
+  content: "\f03b";
+}
+.icon-indent-right:before {
+  content: "\f03c";
+}
+.icon-facetime-video:before {
+  content: "\f03d";
+}
+.icon-picture:before {
+  content: "\f03e";
+}
+.icon-pencil:before {
+  content: "\f040";
+}
+.icon-map-marker:before {
+  content: "\f041";
+}
+.icon-adjust:before {
+  content: "\f042";
+}
+.icon-tint:before {
+  content: "\f043";
+}
+.icon-edit:before {
+  content: "\f044";
+}
+.icon-share:before {
+  content: "\f045";
+}
+.icon-check:before {
+  content: "\f046";
+}
+.icon-move:before {
+  content: "\f047";
+}
+.icon-step-backward:before {
+  content: "\f048";
+}
+.icon-fast-backward:before {
+  content: "\f049";
+}
+.icon-backward:before {
+  content: "\f04a";
+}
+.icon-play:before {
+  content: "\f04b";
+}
+.icon-pause:before {
+  content: "\f04c";
+}
+.icon-stop:before {
+  content: "\f04d";
+}
+.icon-forward:before {
+  content: "\f04e";
+}
+.icon-fast-forward:before {
+  content: "\f050";
+}
+.icon-step-forward:before {
+  content: "\f051";
+}
+.icon-eject:before {
+  content: "\f052";
+}
+.icon-chevron-left:before {
+  content: "\f053";
+}
+.icon-chevron-right:before {
+  content: "\f054";
+}
+.icon-plus-sign:before {
+  content: "\f055";
+}
+.icon-minus-sign:before {
+  content: "\f056";
+}
+.icon-remove-sign:before {
+  content: "\f057";
+}
+.icon-ok-sign:before {
+  content: "\f058";
+}
+.icon-question-sign:before {
+  content: "\f059";
+}
+.icon-info-sign:before {
+  content: "\f05a";
+}
+.icon-screenshot:before {
+  content: "\f05b";
+}
+.icon-remove-circle:before {
+  content: "\f05c";
+}
+.icon-ok-circle:before {
+  content: "\f05d";
+}
+.icon-ban-circle:before {
+  content: "\f05e";
+}
+.icon-arrow-left:before {
+  content: "\f060";
+}
+.icon-arrow-right:before {
+  content: "\f061";
+}
+.icon-arrow-up:before {
+  content: "\f062";
+}
+.icon-arrow-down:before {
+  content: "\f063";
+}
+.icon-mail-forward:before,
+.icon-share-alt:before {
+  content: "\f064";
+}
+.icon-resize-full:before {
+  content: "\f065";
+}
+.icon-resize-small:before {
+  content: "\f066";
+}
+.icon-plus:before {
+  content: "\f067";
+}
+.icon-minus:before {
+  content: "\f068";
+}
+.icon-asterisk:before {
+  content: "\f069";
+}
+.icon-exclamation-sign:before {
+  content: "\f06a";
+}
+.icon-gift:before {
+  content: "\f06b";
+}
+.icon-leaf:before {
+  content: "\f06c";
+}
+.icon-fire:before {
+  content: "\f06d";
+}
+.icon-eye-open:before {
+  content: "\f06e";
+}
+.icon-eye-close:before {
+  content: "\f070";
+}
+.icon-warning-sign:before {
+  content: "\f071";
+}
+.icon-plane:before {
+  content: "\f072";
+}
+.icon-calendar:before {
+  content: "\f073";
+}
+.icon-random:before {
+  content: "\f074";
+}
+.icon-comment:before {
+  content: "\f075";
+}
+.icon-magnet:before {
+  content: "\f076";
+}
+.icon-chevron-up:before {
+  content: "\f077";
+}
+.icon-chevron-down:before {
+  content: "\f078";
+}
+.icon-retweet:before {
+  content: "\f079";
+}
+.icon-shopping-cart:before {
+  content: "\f07a";
+}
+.icon-folder-close:before {
+  content: "\f07b";
+}
+.icon-folder-open:before {
+  content: "\f07c";
+}
+.icon-resize-vertical:before {
+  content: "\f07d";
+}
+.icon-resize-horizontal:before {
+  content: "\f07e";
+}
+.icon-bar-chart:before {
+  content: "\f080";
+}
+.icon-twitter-sign:before {
+  content: "\f081";
+}
+.icon-facebook-sign:before {
+  content: "\f082";
+}
+.icon-camera-retro:before {
+  content: "\f083";
+}
+.icon-key:before {
+  content: "\f084";
+}
+.icon-gears:before,
+.icon-cogs:before {
+  content: "\f085";
+}
+.icon-comments:before {
+  content: "\f086";
+}
+.icon-thumbs-up-alt:before {
+  content: "\f087";
+}
+.icon-thumbs-down-alt:before {
+  content: "\f088";
+}
+.icon-star-half:before {
+  content: "\f089";
+}
+.icon-heart-empty:before {
+  content: "\f08a";
+}
+.icon-signout:before {
+  content: "\f08b";
+}
+.icon-linkedin-sign:before {
+  content: "\f08c";
+}
+.icon-pushpin:before {
+  content: "\f08d";
+}
+.icon-external-link:before {
+  content: "\f08e";
+}
+.icon-signin:before {
+  content: "\f090";
+}
+.icon-trophy:before {
+  content: "\f091";
+}
+.icon-github-sign:before {
+  content: "\f092";
+}
+.icon-upload-alt:before {
+  content: "\f093";
+}
+.icon-lemon:before {
+  content: "\f094";
+}
+.icon-phone:before {
+  content: "\f095";
+}
+.icon-unchecked:before,
+.icon-check-empty:before {
+  content: "\f096";
+}
+.icon-bookmark-empty:before {
+  content: "\f097";
+}
+.icon-phone-sign:before {
+  content: "\f098";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-github:before {
+  content: "\f09b";
+}
+.icon-unlock:before {
+  content: "\f09c";
+}
+.icon-credit-card:before {
+  content: "\f09d";
+}
+.icon-rss:before {
+  content: "\f09e";
+}
+.icon-hdd:before {
+  content: "\f0a0";
+}
+.icon-bullhorn:before {
+  content: "\f0a1";
+}
+.icon-bell:before {
+  content: "\f0a2";
+}
+.icon-certificate:before {
+  content: "\f0a3";
+}
+.icon-hand-right:before {
+  content: "\f0a4";
+}
+.icon-hand-left:before {
+  content: "\f0a5";
+}
+.icon-hand-up:before {
+  content: "\f0a6";
+}
+.icon-hand-down:before {
+  content: "\f0a7";
+}
+.icon-circle-arrow-left:before {
+  content: "\f0a8";
+}
+.icon-circle-arrow-right:before {
+  content: "\f0a9";
+}
+.icon-circle-arrow-up:before {
+  content: "\f0aa";
+}
+.icon-circle-arrow-down:before {
+  content: "\f0ab";
+}
+.icon-globe:before {
+  content: "\f0ac";
+}
+.icon-wrench:before {
+  content: "\f0ad";
+}
+.icon-tasks:before {
+  content: "\f0ae";
+}
+.icon-filter:before {
+  content: "\f0b0";
+}
+.icon-briefcase:before {
+  content: "\f0b1";
+}
+.icon-fullscreen:before {
+  content: "\f0b2";
+}
+.icon-group:before {
+  content: "\f0c0";
+}
+.icon-link:before {
+  content: "\f0c1";
+}
+.icon-cloud:before {
+  content: "\f0c2";
+}
+.icon-beaker:before {
+  content: "\f0c3";
+}
+.icon-cut:before {
+  content: "\f0c4";
+}
+.icon-copy:before {
+  content: "\f0c5";
+}
+.icon-paperclip:before,
+.icon-paper-clip:before {
+  content: "\f0c6";
+}
+.icon-save:before {
+  content: "\f0c7";
+}
+.icon-sign-blank:before {
+  content: "\f0c8";
+}
+.icon-reorder:before {
+  content: "\f0c9";
+}
+.icon-list-ul:before {
+  content: "\f0ca";
+}
+.icon-list-ol:before {
+  content: "\f0cb";
+}
+.icon-strikethrough:before {
+  content: "\f0cc";
+}
+.icon-underline:before {
+  content: "\f0cd";
+}
+.icon-table:before {
+  content: "\f0ce";
+}
+.icon-magic:before {
+  content: "\f0d0";
+}
+.icon-truck:before {
+  content: "\f0d1";
+}
+.icon-pinterest:before {
+  content: "\f0d2";
+}
+.icon-pinterest-sign:before {
+  content: "\f0d3";
+}
+.icon-google-plus-sign:before {
+  content: "\f0d4";
+}
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+.icon-money:before {
+  content: "\f0d6";
+}
+.icon-caret-down:before {
+  content: "\f0d7";
+}
+.icon-caret-up:before {
+  content: "\f0d8";
+}
+.icon-caret-left:before {
+  content: "\f0d9";
+}
+.icon-caret-right:before {
+  content: "\f0da";
+}
+.icon-columns:before {
+  content: "\f0db";
+}
+.icon-sort:before {
+  content: "\f0dc";
+}
+.icon-sort-down:before {
+  content: "\f0dd";
+}
+.icon-sort-up:before {
+  content: "\f0de";
+}
+.icon-envelope:before {
+  content: "\f0e0";
+}
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+.icon-rotate-left:before,
+.icon-undo:before {
+  content: "\f0e2";
+}
+.icon-legal:before {
+  content: "\f0e3";
+}
+.icon-dashboard:before {
+  content: "\f0e4";
+}
+.icon-comment-alt:before {
+  content: "\f0e5";
+}
+.icon-comments-alt:before {
+  content: "\f0e6";
+}
+.icon-bolt:before {
+  content: "\f0e7";
+}
+.icon-sitemap:before {
+  content: "\f0e8";
+}
+.icon-umbrella:before {
+  content: "\f0e9";
+}
+.icon-paste:before {
+  content: "\f0ea";
+}
+.icon-lightbulb:before {
+  content: "\f0eb";
+}
+.icon-exchange:before {
+  content: "\f0ec";
+}
+.icon-cloud-download:before {
+  content: "\f0ed";
+}
+.icon-cloud-upload:before {
+  content: "\f0ee";
+}
+.icon-user-md:before {
+  content: "\f0f0";
+}
+.icon-stethoscope:before {
+  content: "\f0f1";
+}
+.icon-suitcase:before {
+  content: "\f0f2";
+}
+.icon-bell-alt:before {
+  content: "\f0f3";
+}
+.icon-coffee:before {
+  content: "\f0f4";
+}
+.icon-food:before {
+  content: "\f0f5";
+}
+.icon-file-text-alt:before {
+  content: "\f0f6";
+}
+.icon-building:before {
+  content: "\f0f7";
+}
+.icon-hospital:before {
+  content: "\f0f8";
+}
+.icon-ambulance:before {
+  content: "\f0f9";
+}
+.icon-medkit:before {
+  content: "\f0fa";
+}
+.icon-fighter-jet:before {
+  content: "\f0fb";
+}
+.icon-beer:before {
+  content: "\f0fc";
+}
+.icon-h-sign:before {
+  content: "\f0fd";
+}
+.icon-plus-sign-alt:before {
+  content: "\f0fe";
+}
+.icon-double-angle-left:before {
+  content: "\f100";
+}
+.icon-double-angle-right:before {
+  content: "\f101";
+}
+.icon-double-angle-up:before {
+  content: "\f102";
+}
+.icon-double-angle-down:before {
+  content: "\f103";
+}
+.icon-angle-left:before {
+  content: "\f104";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+.icon-angle-up:before {
+  content: "\f106";
+}
+.icon-angle-down:before {
+  content: "\f107";
+}
+.icon-desktop:before {
+  content: "\f108";
+}
+.icon-laptop:before {
+  content: "\f109";
+}
+.icon-tablet:before {
+  content: "\f10a";
+}
+.icon-mobile-phone:before {
+  content: "\f10b";
+}
+.icon-circle-blank:before {
+  content: "\f10c";
+}
+.icon-quote-left:before {
+  content: "\f10d";
+}
+.icon-quote-right:before {
+  content: "\f10e";
+}
+.icon-spinner:before {
+  content: "\f110";
+}
+.icon-circle:before {
+  content: "\f111";
+}
+.icon-mail-reply:before,
+.icon-reply:before {
+  content: "\f112";
+}
+.icon-github-alt:before {
+  content: "\f113";
+}
+.icon-folder-close-alt:before {
+  content: "\f114";
+}
+.icon-folder-open-alt:before {
+  content: "\f115";
+}
+.icon-expand-alt:before {
+  content: "\f116";
+}
+.icon-collapse-alt:before {
+  content: "\f117";
+}
+.icon-smile:before {
+  content: "\f118";
+}
+.icon-frown:before {
+  content: "\f119";
+}
+.icon-meh:before {
+  content: "\f11a";
+}
+.icon-gamepad:before {
+  content: "\f11b";
+}
+.icon-keyboard:before {
+  content: "\f11c";
+}
+.icon-flag-alt:before {
+  content: "\f11d";
+}
+.icon-flag-checkered:before {
+  content: "\f11e";
+}
+.icon-terminal:before {
+  content: "\f120";
+}
+.icon-code:before {
+  content: "\f121";
+}
+.icon-reply-all:before {
+  content: "\f122";
+}
+.icon-mail-reply-all:before {
+  content: "\f122";
+}
+.icon-star-half-full:before,
+.icon-star-half-empty:before {
+  content: "\f123";
+}
+.icon-location-arrow:before {
+  content: "\f124";
+}
+.icon-crop:before {
+  content: "\f125";
+}
+.icon-code-fork:before {
+  content: "\f126";
+}
+.icon-unlink:before {
+  content: "\f127";
+}
+.icon-question:before {
+  content: "\f128";
+}
+.icon-info:before {
+  content: "\f129";
+}
+.icon-exclamation:before {
+  content: "\f12a";
+}
+.icon-superscript:before {
+  content: "\f12b";
+}
+.icon-subscript:before {
+  content: "\f12c";
+}
+.icon-eraser:before {
+  content: "\f12d";
+}
+.icon-puzzle-piece:before {
+  content: "\f12e";
+}
+.icon-microphone:before {
+  content: "\f130";
+}
+.icon-microphone-off:before {
+  content: "\f131";
+}
+.icon-shield:before {
+  content: "\f132";
+}
+.icon-calendar-empty:before {
+  content: "\f133";
+}
+.icon-fire-extinguisher:before {
+  content: "\f134";
+}
+.icon-rocket:before {
+  content: "\f135";
+}
+.icon-maxcdn:before {
+  content: "\f136";
+}
+.icon-chevron-sign-left:before {
+  content: "\f137";
+}
+.icon-chevron-sign-right:before {
+  content: "\f138";
+}
+.icon-chevron-sign-up:before {
+  content: "\f139";
+}
+.icon-chevron-sign-down:before {
+  content: "\f13a";
+}
+.icon-html5:before {
+  content: "\f13b";
+}
+.icon-css3:before {
+  content: "\f13c";
+}
+.icon-anchor:before {
+  content: "\f13d";
+}
+.icon-unlock-alt:before {
+  content: "\f13e";
+}
+.icon-bullseye:before {
+  content: "\f140";
+}
+.icon-ellipsis-horizontal:before {
+  content: "\f141";
+}
+.icon-ellipsis-vertical:before {
+  content: "\f142";
+}
+.icon-rss-sign:before {
+  content: "\f143";
+}
+.icon-play-sign:before {
+  content: "\f144";
+}
+.icon-ticket:before {
+  content: "\f145";
+}
+.icon-minus-sign-alt:before {
+  content: "\f146";
+}
+.icon-check-minus:before {
+  content: "\f147";
+}
+.icon-level-up:before {
+  content: "\f148";
+}
+.icon-level-down:before {
+  content: "\f149";
+}
+.icon-check-sign:before {
+  content: "\f14a";
+}
+.icon-edit-sign:before {
+  content: "\f14b";
+}
+.icon-external-link-sign:before {
+  content: "\f14c";
+}
+.icon-share-sign:before {
+  content: "\f14d";
+}
+.icon-compass:before {
+  content: "\f14e";
+}
+.icon-collapse:before {
+  content: "\f150";
+}
+.icon-collapse-top:before {
+  content: "\f151";
+}
+.icon-expand:before {
+  content: "\f152";
+}
+.icon-euro:before,
+.icon-eur:before {
+  content: "\f153";
+}
+.icon-gbp:before {
+  content: "\f154";
+}
+.icon-dollar:before,
+.icon-usd:before {
+  content: "\f155";
+}
+.icon-rupee:before,
+.icon-inr:before {
+  content: "\f156";
+}
+.icon-yen:before,
+.icon-jpy:before {
+  content: "\f157";
+}
+.icon-renminbi:before,
+.icon-cny:before {
+  content: "\f158";
+}
+.icon-won:before,
+.icon-krw:before {
+  content: "\f159";
+}
+.icon-bitcoin:before,
+.icon-btc:before {
+  content: "\f15a";
+}
+.icon-file:before {
+  content: "\f15b";
+}
+.icon-file-text:before {
+  content: "\f15c";
+}
+.icon-sort-by-alphabet:before {
+  content: "\f15d";
+}
+.icon-sort-by-alphabet-alt:before {
+  content: "\f15e";
+}
+.icon-sort-by-attributes:before {
+  content: "\f160";
+}
+.icon-sort-by-attributes-alt:before {
+  content: "\f161";
+}
+.icon-sort-by-order:before {
+  content: "\f162";
+}
+.icon-sort-by-order-alt:before {
+  content: "\f163";
+}
+.icon-thumbs-up:before {
+  content: "\f164";
+}
+.icon-thumbs-down:before {
+  content: "\f165";
+}
+.icon-youtube-sign:before {
+  content: "\f166";
+}
+.icon-youtube:before {
+  content: "\f167";
+}
+.icon-xing:before {
+  content: "\f168";
+}
+.icon-xing-sign:before {
+  content: "\f169";
+}
+.icon-youtube-play:before {
+  content: "\f16a";
+}
+.icon-dropbox:before {
+  content: "\f16b";
+}
+.icon-stackexchange:before {
+  content: "\f16c";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
+.icon-flickr:before {
+  content: "\f16e";
+}
+.icon-adn:before {
+  content: "\f170";
+}
+.icon-bitbucket:before {
+  content: "\f171";
+}
+.icon-bitbucket-sign:before {
+  content: "\f172";
+}
+.icon-tumblr:before {
+  content: "\f173";
+}
+.icon-tumblr-sign:before {
+  content: "\f174";
+}
+.icon-long-arrow-down:before {
+  content: "\f175";
+}
+.icon-long-arrow-up:before {
+  content: "\f176";
+}
+.icon-long-arrow-left:before {
+  content: "\f177";
+}
+.icon-long-arrow-right:before {
+  content: "\f178";
+}
+.icon-apple:before {
+  content: "\f179";
+}
+.icon-windows:before {
+  content: "\f17a";
+}
+.icon-android:before {
+  content: "\f17b";
+}
+.icon-linux:before {
+  content: "\f17c";
+}
+.icon-dribbble:before {
+  content: "\f17d";
+}
+.icon-skype:before {
+  content: "\f17e";
+}
+.icon-foursquare:before {
+  content: "\f180";
+}
+.icon-trello:before {
+  content: "\f181";
+}
+.icon-female:before {
+  content: "\f182";
+}
+.icon-male:before {
+  content: "\f183";
+}
+.icon-gittip:before {
+  content: "\f184";
+}
+.icon-sun:before {
+  content: "\f185";
+}
+.icon-moon:before {
+  content: "\f186";
+}
+.icon-archive:before {
+  content: "\f187";
+}
+.icon-bug:before {
+  content: "\f188";
+}
+.icon-vk:before {
+  content: "\f189";
+}
+.icon-weibo:before {
+  content: "\f18a";
+}
+.icon-renren:before {
+  content: "\f18b";
+}
+.opl {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  z-index: 50;
+}
+.opl a {
+  width: 73px;
+  height: 56px;
+  text-indent: -9999px;
+  display: block;
+  background: url('https://web.archive.org/web/20161017083312im_/https://s3.amazonaws.com/onepagelove/one-page-love-award.png') no-repeat;
+}
+
+@media (min-width: 1200px) {
+  
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  header .center {
+    text-align: center;
+  }
+  header .center ul {
+    text-align: center;
+    padding-top: 20px;
+  }
+  header .center ul li {
+    font-size: 15px;
+  }
+  .top_panel {
+    padding-top: 120px;
+  }
+  .top_panel img {
+    width: 60%;
+  }
+  .large-9 {
+    text-align: center;
+  }
+  .large-3 img {
+    display: none;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  
+}
+
+img.wp-smiley,
+img.emoji {
+  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  margin: 0 .07em !important;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
+}
+/*
+     FILE ARCHIVED ON 08:33:12 Oct 17, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:54:10 Jun 07, 2017.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
